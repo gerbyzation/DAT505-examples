@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>animation</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script>
+      console.log('ready', TWEEN)
+      var currentValue = {x: 100};
+      var target = {x: 0};
+      var animation = new TWEEN.Tween(currentValue).to(target, 2000)
+      animation.start()
+      function run(time) {
+          TWEEN.update(time);
+          requestAnimationFrame(run)
+          console.log(currentValue)
+      }
+      requestAnimationFrame(run)
+
+    </script>
+
+  </body>
+</html>
