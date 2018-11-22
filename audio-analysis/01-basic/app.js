@@ -9,6 +9,8 @@ const audioElement = document.querySelector("audio")
 
 // load sound from audio element
 const source = audioCtx.createMediaElementSource(audioElement);
+// There are also possibilities to use the microphone or loads
+// an online file.
 
 // create analyzer
 const analyzer = audioCtx.createAnalyser();
